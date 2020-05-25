@@ -16,9 +16,40 @@
   <title>Todo List</title>
 </head>
 
-<body class="bg-success py-3 text-white">
-  <div class="container border rounded">
-    <h1 class="text-center">Todo List</h1>
+<body>
+  <div class="container">
+    <header class="text-light text-center my-4">
+      <h1 class="mb-4">Todo List</h1>
+
+      <form class="search">
+        <div class="form-group">
+          <input type="text" class="form-control m-auto" name="search" placeholder="search todos">
+        </div>
+      </form>
+
+      <!-- list-group for all our todos -->
+      <ul class="list-group todos mx-auto text-light">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Seek Allah's help</span>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Beg Allah for Knowledge</span>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Seek Allah's Refuge</span>
+          <i class="far fa-trash-alt delete"></i>
+        </li>
+
+      </ul>
+
+      <!-- add -->
+      <form class="add text-center my-4">
+        <label class="text-light">Add a new todo...</label>
+        <input type=" text" class="form-control m-auto" name="add">
+      </form>
+    </header>
 
   </div>
 

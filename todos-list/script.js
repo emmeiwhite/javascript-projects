@@ -18,3 +18,11 @@ addForm.addEventListener('submit', e => {
 
   addForm.reset();
 });
+
+// To remove an element we will use event delegation method... Bubbling
+
+lists.addEventListener('click', (e) => {
+  if (e.target.classList.contains('delete')) {
+    e.target.parentElement.remove();
+  }
+});

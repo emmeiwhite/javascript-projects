@@ -5,7 +5,10 @@ const search = document.querySelector('.search input');
 const generateTemplate = todo => {
   const html = `<li class="list-group-item d-flex justify-content-between align-items-center">
     <span>${todo}</span>
-    <i class="far fa-trash-alt delete"></i>
+    <span>
+     <i class="far fa-trash-alt delete"></i>
+     <i class="fas fa-check tick ml-2"></i>
+    <span>
   </li>`; // Template string
 
   list.innerHTML += html;
@@ -24,12 +27,15 @@ addForm.addEventListener('submit', e => {
 
 list.addEventListener('click', (e) => {
   if (e.target.classList.contains('delete')) {
-    e.target.parentElement.remove();
+    e.target.parentElement.parentElement.remove();
+  }
+
+  if (e.target.classList.contains('tick')) {
+    e.target.classList.toggle('completed');
   }
 });
 
 // Search The todo ...
-
 const filterTodos = term => {
   Array.from(list.children)
     .filter((todo) => !todo.textContent.toUpperCase().includes(term.toUpperCase()))
@@ -39,6 +45,7 @@ const filterTodos = term => {
     .filter((todo) => todo.textContent.toUpperCase().includes(term.toUpperCase()))
     .forEach(todo => todo.classList.remove('filtered'));
 };
+
 // keyup event
 search.addEventListener('keyup', () => {
   const term = search.value.trim();

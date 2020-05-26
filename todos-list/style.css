@@ -18,8 +18,13 @@ input[type=text]:focus{
   background: #423a6f;
 }
 
-.delete{
+.delete,
+.tick{
   cursor: pointer;
+}
+
+.completed{
+  color:rgb(35, 240, 35);
 }
 
 .filtered{

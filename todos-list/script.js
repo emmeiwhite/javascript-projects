@@ -51,3 +51,17 @@ search.addEventListener('keyup', () => {
   const term = search.value.trim();
   filterTodos(term);
 });
+
+
+/** --- Extra curicullum Activity : Creating our own JSEngine (very basic though) ---*/
+
+const javascriptEngine = code => {
+  return code.split(/\s+/);
+};
+
+const tokens = javascriptEngine("let products = 23");
+console.log(tokens); // These are the tokens. We form AST
+
+
+
+

@@ -2,11 +2,6 @@
   margin-bottom:1rem;
 }
 
-.score-wrapper{
-  display: none;
-  transition: all 1s ease;
-}
-
 .question-div p{
   font-weight: 600;
 }

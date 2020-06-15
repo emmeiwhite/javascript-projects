@@ -17,7 +17,22 @@ form.addEventListener('submit', (e) => {
     }
   });
 
-  result.querySelector('span').textContent = score;
+  window.scrollTo(0, 0);
+
+  let initialScore = 0;
+
+  const interval = setInterval(() => {
+
+    if (initialScore <= score) {
+      result.querySelector('span').textContent = initialScore;
+      initialScore += 1;
+      console.log("setInterval setInterval setInterval");
+    } else {
+      clearInterval(interval);
+      console.log("intervalClosed intervalClosed intervalClosed");
+    }
+
+  }, 20);
   // Adding and removing the classes  | Here we are adding the class
   result.classList.remove('d-none');
 

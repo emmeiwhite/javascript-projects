@@ -9,9 +9,9 @@ const tickTock = () => {
 
   /* --- htmlTemplate --- */
   let html = `<div>
-    <span>${hours}</span> : 
-    <span>${minutes}</span> :
-    <span>${seconds}</span> 
+    <span class="time">${hours}</span> <span class="colon">: </span>
+    <span class="time">${minutes}</span> <span  class="colon">:</span>
+    <span class="time">${seconds}</span> 
   </div>`;
 
   clock.innerHTML = html;
